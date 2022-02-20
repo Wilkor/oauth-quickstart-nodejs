@@ -26,7 +26,7 @@ if (process.env.SCOPE) {
     SCOPES = (process.env.SCOPE.split(/ |, ?|%20/)).join(' ');
 }
 
-const REDIRECT_URI = `http://localhost:${PORT}/oauth-callback`;
+const REDIRECT_URI = `https://parse-hubspot.herokuapp.com/oauth-callback`;
 
 app.use(session({
   secret: Math.random().toString(36).substring(2),
