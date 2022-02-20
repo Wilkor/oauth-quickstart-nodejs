@@ -141,5 +141,9 @@ app.get('/error', (req, res) => {
   res.end();
 });
 
-app.listen(PORT, () => console.log(`=== Starting your app on http://localhost:${PORT} ===`));
-opn(`http://localhost:${PORT}`);
+
+let server = app.listen(process.env.PORT ||3333, function(){
+  let host = server.address().address, 
+      port = server.address().port;
+  })
+
